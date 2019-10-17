@@ -30,13 +30,13 @@ public class AtendimentoController {
     private TextField peso;
 
     @FXML
-    private float altura;
+    private TextField altura;
 
     @FXML
     private DatePicker date;
 
     @FXML
-    private String txtDoenca;
+    private TextField txtDoenca;
 
     @FXML
     void btnCancelar(ActionEvent event) {
@@ -47,18 +47,18 @@ public class AtendimentoController {
     void btnFinalizar(ActionEvent event) {
     	String comentarioEnfermeiro = txtComentarioEnfermeiro.getText();
     	String comentarioMedico = txtComentarioMedico.getText();
-    	String pesos = peso.getText();
-    	String alturas = altura.getText();
-    	String data = date.getPromptText();
+    	float pesos=Float.parseFloat(peso.getText());
+    	float  alturas = Float.parseFloat(altura.getText());
+    	String  data = date.getPromptText();
     	String doencas = txtDoenca.getText();
 
     	Atendimento atendimento = new Atendimento();
     	atendimento.setComentarioEnfermeiro(comentarioEnfermeiro);
     	atendimento.setComentario_Medico(comentarioMedico);
-    	atendimento.setPeso(peso);
-    	atendimento.setAltura(altura);
-    	atendimento.setDoenca(txtDoenca);
-    	AtendimentoDAO pacientes = new AtendimentoDAO();
+    	atendimento.setPeso(pesos);
+    	atendimento.setAltura(alturas);
+    	atendimento.setDoenca(doencas);
+    	AtendimentoDAO paciente = new AtendimentoDAO();
     	atendimento.save(atendimento);
 
     }
