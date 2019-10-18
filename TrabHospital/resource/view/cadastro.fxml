@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="679.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cadastro">
+   <children>
+      <AnchorPane layoutX="254.0" layoutY="47.0" prefHeight="479.0" prefWidth="390.0" style="-fx-background-color: #363636;">
+         <children>
+            <Label layoutX="117.0" layoutY="20.0" prefHeight="33.0" prefWidth="129.0" text="Cadastro" textFill="#fff9f9" />
+            <Label layoutX="21.0" layoutY="53.0" prefHeight="33.0" prefWidth="44.0" text="Nome :" textFill="#fff9f9" />
+            <Label layoutX="21.0" layoutY="86.0" prefHeight="33.0" prefWidth="44.0" text="CPF:" textFill="#fff9f9" />
+            <Label layoutX="21.0" layoutY="119.0" prefHeight="33.0" prefWidth="118.0" text="Data de Nascimento" textFill="#fff9f9" />
+            <Label layoutX="21.0" layoutY="152.0" prefHeight="33.0" prefWidth="129.0" text="Tipo Sanguinio:" textFill="#fff9f9" />
+            <TextField fx:id="nome" layoutX="76.0" layoutY="57.0" onAction="#nome" prefHeight="25.0" prefWidth="236.0" />
+            <TextField fx:id="cpf" layoutX="76.0" layoutY="90.0" onAction="#cpf" prefHeight="25.0" prefWidth="236.0" />
+            <DatePicker fx:id="date" layoutX="138.0" layoutY="123.0" onAction="#date" />
+            <RadioButton fx:id="cboAB" layoutX="14.0" layoutY="185.0" mnemonicParsing="false" onAction="#CBOAB" text="AB+" textFill="#eeeaea" />
+            <RadioButton fx:id="cboABnegativo" layoutX="95.0" layoutY="185.0" mnemonicParsing="false" onAction="#cboABnegativo" text="AB-" textFill="#eeeaea" />
+            <RadioButton fx:id="cboApositivo" layoutX="167.0" layoutY="186.0" mnemonicParsing="false" onAction="#cboApositivo" text="A+" textFill="#eeeaea" />
+            <RadioButton fx:id="cboAnegativo" layoutX="246.0" layoutY="185.0" mnemonicParsing="false" onAction="#cboAnegativo" text="A-" textFill="#eeeaea" />
+            <RadioButton fx:id="cboB" layoutX="12.0" layoutY="220.0" mnemonicParsing="false" onAction="#cboB" text="B+" textFill="#eeeaea" />
+            <RadioButton fx:id="cboB" layoutX="95.0" layoutY="224.0" mnemonicParsing="false" onAction="#cboBnegativo" prefHeight="0.0" prefWidth="44.0" text="B-" textFill="#eeeaea" />
+            <RadioButton fx:id="cboOpositvo" layoutX="172.0" layoutY="224.0" mnemonicParsing="false" onAction="#cboOpositivo" text="O+" textFill="#eeeaea" />
+            <RadioButton fx:id="cboOnegativo" layoutX="246.0" layoutY="224.0" mnemonicParsing="false" onAction="#cboOnegativo" text="O-" textFill="#eeeaea" />
+            <Label layoutX="12.0" layoutY="255.0" prefHeight="33.0" prefWidth="94.0" text="Sexo:" textFill="#fff9f9" />
+            <RadioButton fx:id="cboMasculino" layoutX="13.0" layoutY="288.0" mnemonicParsing="false" onAction="#cboMasculino" prefHeight="17.0" prefWidth="82.0" text="Masculino" textFill="#eeeaea" />
+            <RadioButton fx:id="cboFeminino" layoutX="17.0" layoutY="322.0" mnemonicParsing="false" onAction="#cboFeminino" prefHeight="17.0" prefWidth="82.0" text="Feminino" textFill="#eeeaea" />
+            <Label layoutX="139.0" layoutY="255.0" prefHeight="33.0" prefWidth="94.0" text="Estado Civil:" textFill="#fff9f9" />
+            <RadioButton fx:id="cboSolteiro" layoutX="131.0" layoutY="288.0" mnemonicParsing="false" onAction="#cboSolteiro" prefHeight="17.0" prefWidth="82.0" text="Solteiro" textFill="#eeeaea" />
+            <RadioButton fx:id="cboCasado" layoutX="131.0" layoutY="322.0" mnemonicParsing="false" onAction="#cboCasado" prefHeight="17.0" prefWidth="82.0" text="Casado" textFill="#eeeaea" />
+            <Button fx:id="btnFinalizar" layoutX="288.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnFinalizar" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #006400;" text="Finalizar" textFill="#fff8f8" />
+            <Button fx:id="btnCancelar" layoutX="193.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnCancelar" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #800000;" text="Cancelar" textFill="#fff8f8" />
+            <Button fx:id="btnVoltar" layoutX="102.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnVoltar" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #FF4500;" text="Voltar" textFill="#fff8f8" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Sistema%20Hospital%202/imagens/icons8-seringa-52.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

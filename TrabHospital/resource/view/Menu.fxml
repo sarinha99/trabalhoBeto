@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="630.0" style="-fx-background-color: #1C1C1C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu">
+   <children>
+      <Button fx:id="btnCadastro" layoutX="155.0" layoutY="87.0" mnemonicParsing="false" onAction="#btnCadastro" prefHeight="63.0" prefWidth="234.0" style="-fx-background-color: #006400;" text="Cadastro" textFill="#f8f5f5" />
+      <Button fx:id="btnPaciente" layoutX="155.0" layoutY="162.0" mnemonicParsing="false" onAction="#btnPaciente" prefHeight="63.0" prefWidth="234.0" style="-fx-background-color: #006400;" text="Paciente" textFill="#fcf3f3" />
+      <Button fx:id="btnEnfermidade" layoutX="155.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnEnfermidade" prefHeight="63.0" prefWidth="234.0" style="-fx-background-color: #006400;" text="Enfermidade" textFill="#fffefe" />
+      <Button fx:id="btnMedico" layoutX="396.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnMedico" prefHeight="63.0" prefWidth="226.0" style="-fx-background-color: #006400;" text="Medico" textFill="#fcf7f7" />
+      <Button fx:id="btnEnfermeiro" layoutX="155.0" layoutY="302.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="234.0" style="-fx-background-color: #006400;" text="Enfermeiro" textFill="#f8f6f6" />
+      <Button fx:id="btnAtendimento" layoutX="155.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnAtendimento" prefHeight="63.0" prefWidth="234.0" style="-fx-background-color: #006400;" text="Atendimento" textFill="#fff6f6" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Sistema%20Hospital%202/imagens/icons8-seringa-52.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEntrada" layoutX="396.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnEntrada" prefHeight="63.0" prefWidth="226.0" style="-fx-background-color: #006400;" text="Entrada" textFill="#fff6f6" />
+      <Button fx:id="btnEnfermidadePessoal" layoutX="396.0" layoutY="87.0" mnemonicParsing="false" onAction="#btnEnfermidadePessoal" prefHeight="63.0" prefWidth="226.0" style="-fx-background-color: #006400;" text="Enfermidade Pessoal" textFill="#fff6f6" />
+      <Button fx:id="btnGerente" layoutX="396.0" layoutY="162.0" mnemonicParsing="false" onAction="#btnGerente" prefHeight="63.0" prefWidth="226.0" style="-fx-background-color: #006400;" text="Gerente" textFill="#fff6f6" />
+      <Button fx:id="btnGerente" layoutX="396.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnGerente" prefHeight="63.0" prefWidth="226.0" style="-fx-background-color: #006400;" text="Gerente" textFill="#fcf7f7" />
+   </children>
+</AnchorPane>

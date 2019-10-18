@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="679.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospital.controller.Atendimento">
+   <children>
+      <AnchorPane layoutX="253.0" layoutY="55.0" prefHeight="479.0" prefWidth="390.0" style="-fx-background-color: #363636;">
+         <children>
+            <Label layoutX="117.0" layoutY="20.0" prefHeight="33.0" prefWidth="129.0" text="Atendimento" textFill="#fff9f9" />
+            <Label layoutX="10.0" layoutY="98.0" prefHeight="33.0" prefWidth="150.0" text=" Comentario Enfermeiro:" textFill="#fff9f9" />
+            <Button fx:id="btnFinalizar" layoutX="288.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnFinalizar" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #006400;" text="Finalizar" textFill="#fff8f8" />
+            <Button fx:id="btnCancelar" layoutX="193.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnCancelar" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #800000;" text="Cancelar" textFill="#fff8f8" />
+            <Button fx:id="btnVoltar" layoutX="102.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnVoltar" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #FF4500;" text="Voltar" textFill="#fff8f8" />
+            <TextArea fx:id="txtComentarioEnfermeiro" layoutX="160.0" layoutY="70.0" onDragDetected="#txtComentarioEnfermeiro" prefHeight="88.0" prefWidth="200.0" />
+            <Label layoutX="10.0" layoutY="199.0" prefHeight="33.0" prefWidth="150.0" text="Comentario Medico:" textFill="#fff9f9" />
+            <TextArea fx:id="txtComentarioMedico" layoutX="160.0" layoutY="172.0" onDragDetected="#txtComentarioMedico" prefHeight="88.0" prefWidth="200.0" />
+            <Label layoutX="10.0" layoutY="281.0" prefHeight="33.0" prefWidth="60.0" text="Peso:" textFill="#fff9f9" />
+            <Label layoutX="152.0" layoutY="281.0" prefHeight="33.0" prefWidth="60.0" text="Altura:" textFill="#fff9f9" />
+            <TextField fx:id="peso" layoutX="53.0" layoutY="285.0" onAction="#floatPeso" prefHeight="25.0" prefWidth="86.0" />
+            <TextField fx:id="altura" layoutX="191.0" layoutY="285.0" onAction="#floatAltura" prefHeight="25.0" prefWidth="101.0" />
+            <Label layoutX="10.0" layoutY="326.0" prefHeight="33.0" prefWidth="60.0" text="Data" textFill="#fff9f9" />
+            <DatePicker fx:id="date" layoutX="46.0" layoutY="330.0" onAction="#date" prefHeight="25.0" prefWidth="129.0" />
+            <Label layoutX="182.0" layoutY="326.0" prefHeight="33.0" prefWidth="43.0" text="Doença" textFill="#fff9f9" />
+            <TextField fx:id="txtDoenca" layoutX="225.0" layoutY="330.0" onAction="#txtDoenca" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Sistema%20Hospital%202/imagens/icons8-seringa-52.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,14 +1,16 @@
 package br.com.hospital.controller;
 
 
-	import javafx.event.ActionEvent;
+	import br.com.hospital.DAO.AtendimentoDAO;
+import br.com.hospital.model.Atendimento;
+import javafx.event.ActionEvent;
 	import javafx.fxml.FXML;
 	import javafx.scene.control.Button;
 	import javafx.scene.control.DatePicker;
 	import javafx.scene.control.RadioButton;
 	import javafx.scene.control.TextField;
 
-	public class Cadastro {
+	public class CadastroController {
 
 	    @FXML
 	    private TextField nome;
@@ -73,6 +75,22 @@ package br.com.hospital.controller;
 
 	    @FXML
 	    void btnFinalizar(ActionEvent event) {
+	    	String nomes = nome.getText();
+	    	String cpfs = cpf.getText();
+	    	String  data= date.getPromptText();
+	    	float  alturas = Float.parseFloat(altura.getText());
+	    	String  data = date.getPromptText();
+	    	String doencas = txtDoenca.getText();
+
+	    	Atendimento atendimento = new Atendimento();
+	    	atendimento.setComentarioEnfermeiro(comentarioEnfermeiro);
+	    	atendimento.setComentario_Medico(comentarioMedico);
+	    	atendimento.setPeso(pesos);
+	    	atendimento.setAltura(alturas);
+	    	atendimento.setDoenca(doencas);
+	    	AtendimentoDAO paciente = new AtendimentoDAO();
+	    	atendimento.save(atendimento);
+
 
 	    }
 
