@@ -1,11 +1,14 @@
 package br.com.hospital.model;
 
+import java.time.LocalDate;
 import java.util.Date;
+
+import javafx.scene.control.TextField;
 
 public class Pessoa {
 	 private String nome;
 	 private String cpf;
-	 private Date dataNascimento;
+	 private LocalDate dataNascimento;
 	 private  String tipo_sanguinio;
 	 private String sexo;
 	 private String status_Civil;
@@ -25,8 +28,8 @@ public class Pessoa {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String string) {
+		this.nome = string;
 	}
 
 	public String getCpf() {
@@ -37,11 +40,11 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate  dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
@@ -74,9 +77,13 @@ public class Pessoa {
 		return 0;
 	}
 
-	public void setStatusPessoa(String string) {
+	public java.sql.Date getValues() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setValues(java.sql.Date date) {
 		// TODO Auto-generated method stub
 		
 	}
-	 
 }

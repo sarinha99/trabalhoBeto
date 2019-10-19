@@ -1,174 +1,147 @@
 package br.com.hospital.controller;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 
-	import br.com.hospital.DAO.AtendimentoDAO;
-import br.com.hospital.model.Atendimento;
+import br.com.hospital.DAO.PacienteDAO;
+import br.com.hospital.DAO.PessoaDAO;
+import br.com.hospital.model.Paciente;
+import br.com.hospital.model.Pessoa;
 import javafx.event.ActionEvent;
-	import javafx.fxml.FXML;
-	import javafx.scene.control.Button;
-	import javafx.scene.control.DatePicker;
-	import javafx.scene.control.RadioButton;
-	import javafx.scene.control.TextField;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Labeled;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 
-	public class CadastroController {
+public class CadastroController {
 
-	    @FXML
-	    private TextField nome;
+    @FXML
+    private TextField nome;
 
-	    @FXML
-	    private TextField cpf;
+    @FXML
+    private TextField cpf;
 
-	    @FXML
-	    private DatePicker date;
+    @FXML
+    private  DatePicker date;
 
-	    @FXML
-	    private RadioButton cboAB;
+    @FXML
+    private RadioButton rbAB;
 
-	    @FXML
-	    private RadioButton cboABnegativo;
+    @FXML
+    private ToggleGroup sangue;
 
-	    @FXML
-	    private RadioButton cboApositivo;
+    @FXML
+    private RadioButton rbABnegativo;
 
-	    @FXML
-	    private RadioButton cboAnegativo;
+    @FXML
+    private RadioButton rbApositivo;
 
-	    @FXML
-	    private RadioButton cboB;
+    @FXML
+    private RadioButton rbAnegativo;
 
-	    @FXML
-	    private RadioButton cboOpositvo;
+    @FXML
+    private RadioButton rbB;
 
-	    @FXML
-	    private RadioButton cboOnegativo;
+    @FXML
+    private RadioButton rbOpositvo;
 
-	    @FXML
-	    private RadioButton cboMasculino;
+    @FXML
+    private RadioButton rbOnegativo;
 
-	    @FXML
-	    private RadioButton cboFeminino;
+    @FXML
+    private RadioButton rbMasculino;
 
-	    @FXML
-	    private RadioButton cboSolteiro;
+    @FXML
+    private ToggleGroup sexo;
 
-	    @FXML
-	    private RadioButton cboCasado;
+    @FXML
+    private RadioButton rbFeminino;
 
-	    @FXML
-	    private Button btnFinalizar;
+    @FXML
+    private RadioButton cboSolteiro;
 
-	    @FXML
-	    private Button btnCancelar;
+    @FXML
+    private ToggleGroup STATUS;
 
-	    @FXML
-	    private Button btnVoltar;
+    @FXML
+    private RadioButton rbCasado;
 
-	    @FXML
-	    void CBOAB(ActionEvent event) {
+    @FXML
+    private Button btnFinalizar;
 
-	    }
+    @FXML
+    private Button btnCancelar;
 
-	    @FXML
-	    void btnCancelar(ActionEvent event) {
+    @FXML
+    private Button btnVoltar;
 
-	    }
+    @FXML
+    void btnCancelar(ActionEvent event) {
 
-	    @FXML
-	    void btnFinalizar(ActionEvent event) {
-	    	String nomes = nome.getText();
-	    	String cpfs = cpf.getText();
-	    	String  data= date.getPromptText();
-	    	float  alturas = Float.parseFloat(altura.getText());
-	    	String  data = date.getPromptText();
-	    	String doencas = txtDoenca.getText();
+    }
 
-	    	Atendimento atendimento = new Atendimento();
-	    	atendimento.setComentarioEnfermeiro(comentarioEnfermeiro);
-	    	atendimento.setComentario_Medico(comentarioMedico);
-	    	atendimento.setPeso(pesos);
-	    	atendimento.setAltura(alturas);
-	    	atendimento.setDoenca(doencas);
-	    	AtendimentoDAO paciente = new AtendimentoDAO();
-	    	atendimento.save(atendimento);
+    @FXML
+    void btnFinalizar(ActionEvent event) {
+    	String nomes = nome.getText();
+    	String cpfs = cpf.getText();
+    	LocalDate dataNascimento = date.getValue();
+    	//String tipo_sangue = sangue.getText();
+    	String abNegativo = rbABnegativo.getText();
+    	String abPositivo = rbApositivo.getText();
+    	String a_negativo = rbAnegativo.getText();
+    	String b = rbB.getText();
+    	String o = rbOpositvo.getText();
+    	String op = rbOnegativo.getText();
+    	String  masculino = rbMasculino.getText();
+    	String feminino = rbFeminino.getText();
+    	String casado = rbCasado.getText();
+    	String solteiro = cboSolteiro.getText();
+    	
+    	Pessoa pes = new Pessoa();
+    	pes.setNome(nomes);
+    	pes.setCpf(cpfs);
+    	pes.setDataNascimento(dataNascimento);
+    	pes.setTipo_Sanguinio(a_negativo);
+    	pes.setTipo_Sanguinio(abPositivo);
+    	pes.setTipo_Sanguinio(a_negativo);
+    	pes.setTipo_Sanguinio(b);
+    	pes.setTipo_Sanguinio(o);
+    	pes.setTipo_Sanguinio(op);
+    	pes.setSexo(masculino);
+    	pes.setSexo(feminino);
+    	pes.setStatus_Civil(casado);
+    	pes.setStatus_Civil(solteiro);
+    	
+    	PessoaDAO cadastros = new PessoaDAO();
+    	//cadastros.save(pes);
 
+    }
 
-	    }
+    @FXML
+    void btnVoltar(ActionEvent event) {
 
-	    @FXML
-	    void btnVoltar(ActionEvent event) {
+    }
 
-	    }
+   
 
-	    @FXML
-	    void cboABnegativo(ActionEvent event) {
+   
+    @FXML
+    void cpf(ActionEvent event) {
 
-	    }
+    }
 
-	    @FXML
-	    void cboAnegativo(ActionEvent event) {
+    @FXML
+    void date(ActionEvent event) {
 
-	    }
+    }
 
-	    @FXML
-	    void cboApositivo(ActionEvent event) {
+    @FXML
+    void nome(ActionEvent event) {
 
-	    }
+    }
 
-	    @FXML
-	    void cboB(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void cboBnegativo(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void cboCasado(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void cboFeminino(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void cboMasculino(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void cboOnegativo(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void cboOpositivo(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void cboSolteiro(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void cpf(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void date(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void nome(ActionEvent event) {
-
-	    }
-
-	}
-
-
+}

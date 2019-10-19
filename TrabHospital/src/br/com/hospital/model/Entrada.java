@@ -1,11 +1,12 @@
 package br.com.hospital.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Entrada extends Paciente {
 		private int idPaciente;
-		private Date DataEntrada;
-		private Date DataSaida;
+		private LocalDate DataEntrada;
+		private LocalDate DataSaida;
 		private String Status_Entrada;
 		private String Status_Paciente;
 		
@@ -26,19 +27,19 @@ public class Entrada extends Paciente {
 			this.idPaciente = idPaciente;
 		}
 
-		public Date getDataEntrada() {
+		public LocalDate getDataEntrada() {
 			return DataEntrada;
 		}
 
-		public void setDataEntrada(Date dataEntrada) {
+		public void setDataEntrada(LocalDate dataEntrada) {
 			DataEntrada = dataEntrada;
 		}
 
-		public Date getDataSaida() {
+		public LocalDate getDataSaida() {
 			return DataSaida;
 		}
 
-		public void setDataSaida(Date dataSaida) {
+		public void setDataSaida(LocalDate dataSaida) {
 			DataSaida = dataSaida;
 		}
 

@@ -1,12 +1,18 @@
 package br.com.hospital.controller;
 
+import java.time.LocalDate;
+
+import br.com.hospital.DAO.EntradaDAO;
+import br.com.hospital.DAO.PacienteDAO;
+import br.com.hospital.model.Entrada;
+import br.com.hospital.model.Paciente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
-public class Entrada {
+public class EntradaController {
 
     @FXML
     private DatePicker DataEntrada;
@@ -33,6 +39,14 @@ public class Entrada {
 
     @FXML
     void btnFinalizar(ActionEvent event) {
+    	LocalDate dataEntrada = DataEntrada.getValue(); 
+    	LocalDate dataSaida = dateSaida.getValue();
+    	String statusPaciente = txtStatusPaciente.getText();
+    	Entrada entrada = new Entrada();
+    	entrada.setDataEntrada(dataEntrada);
+    	entrada.setDataSaida(dataSaida);
+    	EntradaDAO entrada1 = new EntradaDAO();
+    	entradar.save(entradar);
 
     }
 

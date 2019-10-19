@@ -24,8 +24,9 @@ public class PessoaDAO {
 				stmt.setInt(1,pes.getIdPessoa());
 				stmt.setString(2,pes.getNome());
 				stmt.setString(3,pes.getCpf());
-				stmt.setDate(4,(Date) pes.getDataNascimento());
+				stmt.setDate(4,(Date) pes.getValues());
 				stmt.setString(5,pes.getTipo_Sanguinio());
+				
 				stmt.setString(6,pes.getSexo());
 				stmt.setString(7,pes.getStatus_Civil());
 				
@@ -57,7 +58,7 @@ public class PessoaDAO {
 		
 		p1.setNome(rs.getString("nome"));
 		p1.setCpf(rs.getString("cpf"));
-		p1.setDataNascimento(rs.getDate("dataNascimento"));
+		p1.setValues(rs.getDate("dataNascimento"));
 		p1.setTipo_Sanguinio(rs.getString("tipoSanguinio"));
 		p1.setSexo(rs.getString("sexo"));
 		p1.setStatus_Civil(rs.getString("statusCivil"));
@@ -74,7 +75,7 @@ public class PessoaDAO {
 		stmt.setInt(1,pes.getIdPessoa());
 		stmt.setString(2,pes.getNome());
 		stmt.setString(3,pes.getCpf());
-		stmt.setDate(4,(Date) pes.getDataNascimento());
+		stmt.setDate(4,(Date) pes.getValues());
 		stmt.setString(5,pes.getTipo_Sanguinio());
 		stmt.setString(6,pes.getSexo());
 		stmt.setString(7,pes.getStatus_Civil());
