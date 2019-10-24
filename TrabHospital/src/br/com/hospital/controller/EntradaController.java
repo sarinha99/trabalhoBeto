@@ -1,5 +1,6 @@
 package br.com.hospital.controller;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 
 import br.com.hospital.DAO.EntradaDAO;
@@ -38,15 +39,16 @@ public class EntradaController {
     }
 
     @FXML
-    void btnFinalizar(ActionEvent event) {
+    void btnFinalizar(ActionEvent event) throws SQLException {
     	LocalDate dataEntrada = DataEntrada.getValue(); 
     	LocalDate dataSaida = dateSaida.getValue();
     	String statusPaciente = txtStatusPaciente.getText();
     	Entrada entrada = new Entrada();
     	entrada.setDataEntrada(dataEntrada);
     	entrada.setDataSaida(dataSaida);
+    	entrada.setStatus_Paciente(statusPaciente);
     	EntradaDAO entrada1 = new EntradaDAO();
-    	entradar.save(entradar);
+    	entrada1.save(entrada);
 
     }
 

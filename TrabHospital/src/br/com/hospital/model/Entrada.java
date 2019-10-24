@@ -1,7 +1,7 @@
 package br.com.hospital.model;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 
 public class Entrada extends Paciente {
 		private int idPaciente;

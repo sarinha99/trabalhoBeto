@@ -18,8 +18,8 @@ public class EntradaDAO {
 		String sqlInsere = "insert into Entrada VALUES(?,?,?,?,?)";
 		PreparedStatement stmt = conexao.prepareStatement(sqlInsere);
 			stmt.setInt(1,entrada.getIdPaciente());
-			stmt.setBytes(2,(LocalDate) entrada.getDataEntrada());
-		    stmt.setByte(3, (LocalDate) entrada.getDataSaida());
+			stmt . setDate ( 2 , java.sql . Date . valueOf (entrada.getDataEntrada ()));
+			stmt . setDate ( 3 , java.sql . Date . valueOf (entrada.getDataSaida()));
 		    stmt.setString(4, entrada.getStatus_Paciente());
 		    stmt.execute();
 	}
@@ -38,10 +38,9 @@ public class EntradaDAO {
 		System.out.println(conn.getStatus());
 		String sqlInsere = "SELECT FROM Entrada(?,?,?,?,?)";
 		PreparedStatement stmt = conexao.prepareStatement(sqlInsere);
-	   
-		        stmt.setValues(1,(LocalDate) ent.getDataEntrada());
-			
-			    ((PreparedStatement) stmt).setLocalDate(3,(LocalDate) ent.getDataEntrada());
+		stmt . setDate ( 2 , java.sql . Date . valueOf (ent.getDataEntrada ()));
+		       
+		stmt . setDate ( 3 , java.sql . Date . valueOf (ent.getDataSaida ()));
 	
 				stmt.execute();
 	}
@@ -51,8 +50,8 @@ public class EntradaDAO {
 		System.out.println(conn.getStatus());
 		String sqlInsere = "UPDATE Entrada SET(?,?,?,?,?)";
 		PreparedStatement stmt = conexao.prepareStatement(sqlInsere);
-		                 stmt.setDataEntrada(2,(LocalDate) en.getDataEntrada());
-					    stmt.setDate(3,(LocalDate) en.getDataEntrada());
+		stmt . setDate ( 2 , java.sql . Date . valueOf (en.getDataEntrada ()));
+		stmt . setDate ( 2 , java.sql . Date . valueOf (en.getDataSaida ()));
 						stmt.execute();
 				stmt.execute();
 	}

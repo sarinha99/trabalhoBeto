@@ -1,5 +1,6 @@
 package br.com.hospital.controller;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -85,7 +86,7 @@ public class CadastroController {
     }
 
     @FXML
-    void btnFinalizar(ActionEvent event) {
+    void btnFinalizar(ActionEvent event) throws SQLException {
     	String nomes = nome.getText();
     	String cpfs = cpf.getText();
     	LocalDate dataNascimento = date.getValue();
@@ -117,7 +118,7 @@ public class CadastroController {
     	pes.setStatus_Civil(solteiro);
     	
     	PessoaDAO cadastros = new PessoaDAO();
-    	//cadastros.save(pes);
+    	cadastros.save(pes);
 
     }
 
