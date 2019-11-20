@@ -1,9 +1,7 @@
 package br.com.hospital.model;
 
-import java.util.Date;
-import java.util.List;
+import java.time.LocalDate;
 
-import javafx.scene.control.TextField;
 
 public class Atendimento extends Paciente  {
 	private int idAtendimento;
@@ -11,7 +9,7 @@ public class Atendimento extends Paciente  {
 	private String comentario_Medico;
 	private float peso;
 	private float altura;
-	private Date data;
+	private LocalDate data;
 	private String doenca;
 	
 	public String getDoenca() {
@@ -73,24 +71,12 @@ public class Atendimento extends Paciente  {
 		this.altura = altura;
 	}
 
-	public Date getData() {
+	public LocalDate getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void setData(LocalDate data) {
 		this.data = data;
 	}
 
-	public void setPeso(TextField peso2) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void save(Atendimento atendimento) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-	
 }

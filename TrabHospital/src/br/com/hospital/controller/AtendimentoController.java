@@ -1,17 +1,11 @@
 package br.com.hospital.controller;
+
 import br.com.hospital.DAO.AtendimentoDAO;
 import br.com.hospital.model.Atendimento;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 
 public class AtendimentoController {
 
-    @FXML
+	@FXML
     private Button btnFinalizar;
 
     @FXML
@@ -21,16 +15,19 @@ public class AtendimentoController {
     private Button btnVoltar;
 
     @FXML
+    private TableView<?> listaAtendimento;
+
+    @FXML
     private TextArea txtComentarioEnfermeiro;
 
     @FXML
     private TextArea txtComentarioMedico;
 
     @FXML
-    private TextField peso;
+    private TableColumn<?, ?> peso;
 
     @FXML
-    private TextField altura;
+    private TableColumn<?, ?> altura;
 
     @FXML
     private DatePicker date;
@@ -39,12 +36,33 @@ public class AtendimentoController {
     private TextField txtDoenca;
 
     @FXML
+    private ImageView comentarioEnfer;
+
+    @FXML
+    private TableColumn<?, ?> comentarioMedico;
+
+    @FXML
+    private TableColumn<?, ?> doenca;
+
+    @FXML
+    private TableColumn<?, ?> Data;
+
+    @FXML
+    private Button btnEditar;
+
+    @FXML
+    private Button btnExcluir;
+
+    @FXML
+    private Button btnAtualizar;
+    
+    @FXML
     void btnCancelar(ActionEvent event) {
 
     }
 
     @FXML
-    void btnFinalizar(ActionEvent event) {
+    void btnFinalizar(ActionEvent event)  {
     	String comentarioEnfermeiro = txtComentarioEnfermeiro.getText();
     	String comentarioMedico = txtComentarioMedico.getText();
     	float pesos=Float.parseFloat(peso.getText());
@@ -63,39 +81,5 @@ public class AtendimentoController {
 
     }
 
-    @FXML
-    void btnVoltar(ActionEvent event) {
-
-    }
-
-    @FXML
-    void date(ActionEvent event) {
-
-    }
-
-    @FXML
-    void floatAltura(ActionEvent event) {
-
-    }
-
-    @FXML
-    void floatPeso(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtComentarioEnfermeiro(MouseEvent event) {
-
-    }
-
-    @FXML
-    void txtComentarioMedico(MouseEvent event) {
-
-    }
-
-    @FXML
-    void txtDoenca(ActionEvent event) {
-
-    }
 
 }

@@ -1,9 +1,8 @@
 package br.com.hospital.model;
 
 import java.time.LocalDate;
-import java.util.Date;
 
-import javafx.scene.control.TextField;
+
 
 public class Pessoa {
 	 private String nome;
